@@ -57,7 +57,7 @@ a, a:focus,textarea, textarea:focus{
 
 
 
-
+/* Bat Dau Sua Tu Day */
 
 
 
@@ -65,7 +65,7 @@ a, a:focus,textarea, textarea:focus{
 #header .logo--mb{
 	width: 100%;
 	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-bottom: 35px;
 	display: flex;
 	justify-content:space-between;
 	align-items: center;
@@ -220,12 +220,15 @@ a, a:focus,textarea, textarea:focus{
 .info-phone span._tele-phone a i.fa{
 	font-size: 22px;
 }
+.info-phone span.time > span{
+	font-size:12px;
+}
 
 
 
 
 
-
+/* KEt Thuc  */
 
 
 
