@@ -5,13 +5,44 @@
 	position: relative;
 	/* padding:50px 0; */
 }
+
+
+/* Style Cho Menu Tim Kiem Moi Tai Day */
 .banner_main__content{
 	position: absolute;
-	top: 50%;
+	bottom: -5px;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translateX(-50%);
 	width: 100%;
+	z-index: 1000;
 }
+.banner_main__content .formSearchCombo h5 {
+    font-size: 22px;
+	color: #fff;
+	font-weight: 400;
+}
+.banner_main__content .formSearchCombo form {
+	margin: 0;
+	background: #e6e6e6;
+	padding: 10px;
+	box-shadow: 0 3px #faf4f4;
+}
+
+.banner_main__content .formSearchCombo form button {
+    font-size: 14px;
+}
+.banner_main__content .formSearchCombo form .from-hanoi{
+	width: 20%;
+    text-align: center;
+    border-right: 1px solid #ddd;
+	padding: 13px 20px;
+	background:#fff;
+	margin-right: 5px;
+}
+
+/* End Search*/
+
+
 .carousel-item img{
 	object-fit: cover;
 }
@@ -32,27 +63,43 @@
 	font-weight: normal;
     font-size: 20px;
 }
+
+
 .banner_main .home_page{
+
 	background: rgba(0,0,0,0.3);
 	padding:15px;
-	border-radius: 4px
+	border-radius: 4px;
 }
 
 .home_page .form_search{
 	position: relative;
 	margin-bottom: 15px;
+	display: flex;
+	align-items: center;
 	/*border-radius: 4px*/
 }
 .home_page .form_search .input_sear{
 }
 .home_page .form_search input{
-	padding:10px 10px 10px 50px;
+	padding: 10px 10px 10px 50px;
 	line-height: 40px;
 	border:none;
 	border-radius: 4px;
 	width: 100%;
 	position: relative;
 }
+.home_page .form_search .from-hanoi{
+	width: 100%;
+	padding: 8px 20px;
+	line-height: 30px;
+	background: #fff;
+	border-radius: 3px;
+}
+.home_page .form_search .from-hanoi span{
+	text-align: center;
+}
+
 .home_page .form_search .icon_loca{
 	position: absolute;
 	top: 20px;
@@ -284,7 +331,9 @@
 	border-radius: 3px;
 	background:#438DC4;
 	color: #fff;
-	font-weight: 300
+	font-weight: 300;
+	padding:12px 0;
+	font-size:14px;
 }
 .submit_form button:hover{
 	color: #fff
@@ -326,27 +375,29 @@
     max-width: 200px;
     min-width: 140px;
 }
-.wrap_100px{
-		height: 100px
-	}
 
+
+
+/* Sua Phan Book Cat */
 
 /*18/05*/
 .boxCatting{
-	background: #f1f1f1;
+	background: #fff;
 	padding:55px 0;
 }
 .boxCatting .wrapCat{
 	text-align: center;
 	padding:0 15px;
-	color: #1a1a1a
+	color: #1a3863;
 }
 .boxCatting .wrapCat img{
 	margin-bottom: 10px
 }
 .boxCatting .wrapCat h3{
-	font-size: 22px;
+	font-size: 18px;
 }
+
+/* End */
 @supports (font-variation-settings: "wght" 600) {
 	.boxCatting .wrapCat h3{
 		font-weight: 600

@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body{
 	color: #1a1a1a;
-    font-family: "Open Sans",sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
     box-sizing: border-box;
@@ -10,6 +11,7 @@ ul{
 	margin:0;
 	list-style: none
 }
+
 input, input:focus,
 select, select:focus, 
 button, button:focus,
@@ -98,11 +100,6 @@ a, a:focus,textarea, textarea:focus{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	/* padding: 0 10px; */
-	/* margin-left: -15px;
-	margin-right: -15px;
-
-	padding-right: 15px; */
 }
 .menu_main_mo > li{
 	position: relative;
@@ -605,3 +602,300 @@ ul.link_infoPage li i{
 }
 
 
+/* Request */
+
+
+.box-progress{
+	background:#1b3964;
+}
+.box-progress-flex{
+	width: 75%;
+	margin:0 auto;
+	display:flex;
+	justify-content:space-between;
+	padding: 10px 0;
+	
+}
+
+
+.progress-item{
+	text-align: center;
+	width:33.33%;
+	position: relative;
+}
+.progress-item:not(:last-child):after{
+	content: "";
+	position: absolute;
+	top: 25%;
+	left: 55%;
+	width: 100%;
+	height: 3px;
+	background:#fff;
+}
+
+.progress-number{
+	display:inline-block;	
+	border-radius: 50%;
+	background: #fff;
+	padding: 2px 10px;
+	font-size:16px;
+	font-weight:600;
+	color: #1b3964;
+}
+.progress-number.active{
+	background: #f26135;
+	color: #fff;
+}
+
+.progress-text{
+	display:block;
+	font-size: 12px;
+	color: #fff;
+	padding-top: 5px;
+}
+
+
+/* Main REquest */
+.main-request{
+	
+}
+.main-request .row{
+	margin-left: -7px;
+	margin-right: -7px;
+}
+.main-request .s_gutters{
+	padding-left: 7px;
+	padding-right: 7px;
+}
+.main-request h2{
+	color: #1a3863;
+    font-size: 16px;
+    transition: .3s;
+    margin-bottom: 10px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+}
+.main-request .gioithieu-dau{
+	padding-bottom: 30px;
+	border-bottom: 1px solid #7f8c8d;
+}
+.main-request .gioithieu-dau .location{
+	margin-top: 5px;
+}
+.main-request .gioithieu-dau .location a{
+	text-decoration: none;
+	color: #000;
+}
+.gioithieu-dau .location img{
+	width: 15px;
+    display: inline-block;
+    margin-right: 5px;
+}
+.main-request .dichvu{
+	padding-top: 20px;
+}
+.main-request .dichvu span{
+	display:block;
+}
+.main-request .card-price{
+	display:flex;
+	justify-content: space-between;
+	align-items:center;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #7f8c8d;
+}
+.main-request .card-price h2{
+	margin-bottom: 0;
+}
+.main-request .card-price span{
+	font-size: 16px;
+	display: block;
+	font-weight: 900;
+    color: #ff6000;
+
+}
+.main-request .card-info{
+	padding-top: 5px;
+}
+.main-request .card-info span{
+	display: block;
+	font-style: italic;
+}
+
+.card--border{
+	border: 1px solid #cdcdcc;
+}
+/* Phan Form */
+.main-request .form-request{
+	width:75%;
+}
+.main-request .title-form{
+	border-bottom: 1px solid #7f8c8d;
+	padding-bottom: 5px;
+}
+.title-form span{
+	font-size: 13px;
+}
+.form-request .form-group{
+	margin-bottom: 0;
+}
+.form-request .table td, .form-request .table th {
+    padding: .35rem;
+    vertical-align: middle;
+	border-top: none;
+	font-size: 14px;
+}
+
+
+.main-request .table-a{
+	border-bottom: 1px solid #7f8c8d;
+	margin-top: 15px;
+}
+.form-request .form-check{
+	display: inline-block;
+	margin-right: 25px;
+}
+
+/* Custom radio */
+
+.main-request .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 23px;
+	width: 23px;
+	background-color: #eee;
+	border-radius: 50%;
+  }
+  .main-request input:checked ~ .checkmark {
+	background-color: #2196F3;
+  }
+  .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+  }
+  .main-request input:checked ~ .checkmark:after {
+	display: block;
+  }
+  .main-request .checkmark:after {
+	top: 7px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+  .main-request span.vocative {
+    padding-left: 10px;
+}
+
+.table-a  tr  td:nth-child(1){
+	max-width: 30%;
+	width: 30%;
+	word-wrap: break-word;
+}
+.table-a  .push-request{
+	padding: 10px 20px;
+	color: #fff;
+	background:#f26135;
+	display:block;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+}
+.table-a  .push-request span{
+	font-size:20px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+
+.main-request .no_border{
+	border-bottom: none;
+}
+.main-request .no-mbottom{
+	margin-bottom:0;
+}
+
+.main-request .msg_error{
+	color: red;
+}
+.form_date{
+	position: relative;
+}
+.bg-icon{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 40px;
+	height: 25px;
+	background: url(https://data.chinahighlights.com/pic/top10/tour-calendar.png) no-repeat 15px !important;
+}
+
+/* End Request */
+
+/* Start Thank You */
+.card-thankyou{
+	background:#f8f8f8;
+}
+.card-thankyou .back-link{
+	width: 100%;
+	display:flex;
+	margin-top: 10px;
+}
+.card-thankyou .back-link a{
+	width: 50%;
+	background:#959595;
+	text-align: center;
+	color: #fff;
+	border-right: 0;
+	padding: 10px 15px;
+	margin-right: 10px;
+	text-decoration: none;
+}
+.card-thankyou .back-link a span{
+	font-size: 16px;
+	font-weight:600;
+	display: inline-block;
+}
+.card-thankyou span.iconMenu{
+	padding-right: 8px;
+}
+.card-thankyou span{
+	display:block;
+}
+
+.back-link img{
+	width: 20px;
+	object-fit: cover;
+}
+
+._a{
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	width: 100px;
+	margin: 0 auto;
+	padding: 10px 20px;
+	background: gray;
+}
+._a img{
+	width: 25px;
+	object-fit: cover;
+	margin-right: 7px;
+}
+._a span{
+	font-size:14px;
+	color: #fff;
+}
+
+
+@media (max-width:767px){
+	.progress-item:not(:last-child):after {
+		top: 18%;
+    	left: 60%;
+	}
+}
+/* End Thank You */
