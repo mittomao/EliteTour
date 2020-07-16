@@ -149,11 +149,24 @@ a, a:focus,textarea, textarea:focus{
 }
 
 .list_menu_top-header ul li{
-	margin-left: 5px;
+	margin-left: 7px;
 }
 .list_menu_top-header ul li:not(:first-child){
-	border-left: 1px solid;
+	position: relative;
 }
+.list_menu_top-header ul li:not(:first-child)::before{
+	content:'';
+	position: absolute;
+	top: 50%;
+	transform:translateY(-50%);
+	left: 0;
+	width: 1px;
+	height: 10px;
+	background: gray;
+}
+
+
+
 .list_menu_top-header ul.list__menu-flc li a{
 	font-size: 12px;
 	color: #1c1d1e;
@@ -417,8 +430,9 @@ a, a:focus,textarea, textarea:focus{
 /*footer*/
 /*footer*/
 footer{
-	background: #F9F9F9;
+	background: #1A3863;
 	padding:15px 0;
+	color: #fff;
 }
 footer .foot-col-1{
 	max-width: 150px
@@ -429,7 +443,7 @@ footer .foot-col-3{
 }
 footer h3{
 	font-size: 15px;
-    color: #4E4E4E;
+    color: #fff;
     font-weight: bold;
     margin: 0px;
     margin-bottom: 5px
@@ -443,17 +457,30 @@ footer p{
 footer .company_info{
 	padding-right:30px;
 }
+footer .logo_footer{
+	width: 70%;
+	height: 100px;
+	clip-path: ellipse(47% 38% at 50% 48%);
+	/* clip-path: inset(5% 6% 5% 5%); */
+	background: #fff;
+}
+footer .logo_footer a{
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+
 footer .logo_footer img {
     width: auto;
-    height: 61px;
+    height: 80px;
     object-fit: cover;
-    margin-bottom: 15px
+    
 }
 footer .logo_footer p{
 	margin-bottom: 20px
 }
 footer .company_info a{
-	color: #818180;
+	color: #fff;
 	text-decoration: none;
 	transition: .3s
 }
@@ -466,13 +493,89 @@ footer ul{
 footer ul li{
 	display: block;
 }
+footer .icc{
+	margin-top: 15px;
+	display: flex;
+}
+footer .icc .icc-item{
+	width: 30px;
+	height: 30px;
+	margin-right: 15px;
+	border-radius: 50%;
+	background: #fff;
+	position: relative;
+}
+
+footer .icc a{
+	position: absolute;
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%,-50%);
+}
+	footer .icc a i{
+		
+		color: #000;
+		font-size: 16px;
+	}
+
+
+
+
+
+	footer .form__submit{
+		margin-top: 10px;
+		box-sizing: border-box;
+		overflow: hidden;
+		padding: 5px;
+		margin-left: -5px;
+		margin-right: -5px;
+		background: rgba(255,255,255,.4);
+	}
+	footer .form__submit input{
+		padding: 5px 0;
+		background: url(./../img/ico_eml.gif) #fff no-repeat;
+		padding-left: 5px;
+		box-sizing: border-box;
+		background-position:left center;
+		
+	}
+
+	footer .form__submit button{
+		padding: 5px;
+		background: linear-gradient(to right, rgb(171,36,42) 0%,rgb(251,2,2) 24%,rgb(239,22,2) 61%,rgb(164,39,45) 100%);
+	}
+
+
+
+	/* footer .form_submit .input_group{
+		width: 65%;
+	}
+	footer .form_submit .input_group input{
+		width: 100%;
+		padding: 10px;
+	} */
+	/* footer .form_submit button{
+		width: 35%;
+		background: linear-gradient(to right, rgb(171,36,42) 0%,rgb(251,2,2) 24%,rgb(239,22,2) 61%,rgb(164,39,45) 100%);
+		transition: all .4s ease;
+		border: 2px solid black;
+	}
+	footer .form_submit button:hover{
+		background: linear-gradient(to right, #093 0%,rgb(18, 207, 116) 24%,rgb(78, 228, 151) 61%,rgb(20, 145, 40) 100%);
+	} */
+
+
+
+
+
+
 footer ul li h3{
 	font-size:14px;
 	text-transform: uppercase;
 	margin-bottom: 20px
 }
 footer ul li a{
-	color: #818180;
+	color: #fff;
 	text-decoration: none;
 	display: inline-block;
 	transition: .3s;
@@ -503,7 +606,7 @@ ul.list_paypal li{
 }
 ul.list_paypal li a{}
 .text_info{
-	color: #818180;
+	color: #fff;
 	margin-bottom: 20px
 }
 ul.link_infoPage{

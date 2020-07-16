@@ -823,3 +823,74 @@ vertical-align: middle;
     margin-right: 10px
 }
 
+
+
+
+
+
+/* OKI */
+.modalImg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background:rgba(0,0,0,.5);
+    z-index: 100;
+    display: none;
+}
+.modalImg.active{
+    display:block;
+}
+
+.modalImg img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    width: 75%;
+    object-fit: cover;
+    animation: opacityd 1s ease-in-out;
+}
+@keyframes opacityd{
+    0%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+
+    }
+}
+.modalImg span.closeModal{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width:50px;
+    height: 50px;
+    font-size: 36px;
+    color: #fff;
+    border: 2px solid #636e72;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalImg .btnPrev,
+.modalImg .btnNext{
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0.5);
+    z-index: 1000;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.modalImg .btnPrev{
+    left: 10px;
+}
+.modalImg .btnNext{
+    right: 10px;
+}
+

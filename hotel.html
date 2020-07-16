@@ -20,6 +20,43 @@
 <link rel="stylesheet" type="text/css" href="css/responsive/index_res.css">
 <link rel="stylesheet" type="text/css" href="css/responsive/list_res.css">
 </head>
+
+<style>
+	.slider-img{
+		width: 250px;
+		overflow: hidden;
+	}
+	 .slider-img .item{
+		width: 100%;
+	}
+	 .slider-img .item img{
+		width: 100%;
+		width:250px;
+		object-fit: cover;
+	}
+	.slider-img .owl-carousel .owl-nav button.owl-next span,
+	.slider-img .owl-carousel .owl-nav button.owl-prev span{
+		display: none;
+	}
+
+	.slider-img .owl-carousel .owl-nav button.owl-next,
+	.slider-img .owl-carousel .owl-nav button.owl-prev{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 25px;
+		height: 15px;
+		outline: none;
+	}  
+	.slider-img .owl-carousel .owl-nav button.owl-next{
+		right: 15px;
+		background: url(./../img/next_r.png)  7px no-repeat;
+	}
+	.slider-img .owl-carousel .owl-nav button.owl-prev{
+		left: 15px;
+		background: url(./../img/prev_r.png)  7px no-repeat;
+	}
+</style>
 <body>
 
 	<div id="fb-root"></div>
@@ -352,11 +389,38 @@
 		                                        </span>
 		                                        <div class="acc-detailCom" id="price_info_0">
 													<ul>
-														<li><img src="img/index/fixAdd/table.png" alt="" class="imgTable"></li>
-														<li><img src="img/index/fixAdd/humen.png" alt="">Tối đa <strong> 4 </strong> người lớn <strong> 4 </strong> trẻ em</li>
-														<li><img src="img/index/fixAdd/humen.png" alt="">Hướng vườn</li>
-														<li><img src="img/index/fixAdd/humen.png" alt="">220m2</li>
-														
+														<div class="slider-img">
+															<div class="owl-carousel owl-theme" id="sliderDetails_0">
+																<div class="item">
+																	<img src="https://themes.getmotopress.com/luviana/wp-content/uploads/sites/27/2019/07/gallery-2-1024x1005.jpg" alt="">
+																</div>
+																<div class="item">
+																	<img src="https://themes.getmotopress.com/luviana/wp-content/uploads/sites/27/2019/07/gallery-8-1024x1024.jpg" alt="">
+																</div>
+																<div class="item">
+																	<img src="https://themes.getmotopress.com/luviana/wp-content/uploads/sites/27/2019/07/about-rooms-2-1024x692.jpg" alt="">
+																</div>
+															</div>
+														</div>
+														<ul>
+															<li><img src="img/index/fixAdd/humen.png" alt="">Tối đa <strong> 4 </strong> người lớn <strong> 4 </strong> trẻ em</li>
+															<li><img src="img/index/fixAdd/humen.png" alt="">Hướng vườn</li>
+															<li><img src="img/index/fixAdd/humen.png" alt="">220m2</li>
+														</ul>
+														<div class="slider-img">
+															<div class="owl-carousel owl-theme" id="sliderDetails_1">
+																<div class="item">
+																	<img src="https://themes.getmotopress.com/luviana/wp-content/uploads/sites/27/2019/07/gallery-2-1024x1005.jpg" alt="">
+																</div>
+																<div class="item">
+																	<img src="https://themes.getmotopress.com/luviana/wp-content/uploads/sites/27/2019/07/gallery-8-1024x1024.jpg" alt="">
+																</div>
+																<div class="item">
+																	<img src="https://themes.getmotopress.com/luviana/wp-content/uploads/sites/27/2019/07/about-rooms-2-1024x692.jpg" alt="">
+																</div>
+															</div>
+														</div>
+														<i class="fa fa-angle-left" aria-hidden="true"></i>
 													</ul>
 		                                        </div>
 		                                    </th>
@@ -872,7 +936,29 @@
 <script type="text/javascript">
 	$(function(){
 		$("#datepicker").datepicker();
+		for(let i =0 ; i < 3 ;i++)
+		{
+			$(`#sliderDetails_${i}`).owlCarousel({
+				loop:true,
+				nav:false,
+				dots:false,
+				margin:15,
+				responsive:{
+					0:{
+						items:1
+					},
+					600:{
+						items:1
+					},
+					1000:{
+						items:1
+					},
+					1200:{
+						items:1
+					}
+				}
+			});
+		}
 	});
-    
 </script>
 </html>

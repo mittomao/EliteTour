@@ -67,3 +67,56 @@ $(document).mouseup(function (e) {
 });
 // get date
 // 
+
+$(function () { 
+
+    // Add Cac The Vao Body
+     const body = document.querySelector("body");
+     const modalImg = document.createElement("div");
+     modalImg.className = "modalImg";
+     const img = document.createElement("img");
+     const close = document.createElement("span");
+     close.className = "fa fa-times closeModal";
+     const b1 = document.createElement("button");
+     b1.className = "fa fa-angle-left btnPrev";
+     const b2 = document.createElement("button");
+     b2.className = "fa fa-angle-right btnNext";
+     modalImg.appendChild(img);
+     modalImg.appendChild(close);
+     modalImg.appendChild(b1);
+     modalImg.appendChild(b2);
+     body.appendChild(modalImg);
+   
+     let index = 0;
+     const listIMG = $(".slider-img img");
+     const lisst = $(".slider-img");
+     $.each(lisst, function (i, item) { 
+           const imgL = $(item).find("img");
+           $.each(imgL, function (i, it) { 
+                $(it).on("click",function(){
+                   index = i;
+                   $(".modalImg").addClass("active");
+                   $(".modalImg img").attr("src",$(this).attr("src"));
+                });
+           });
+   
+           $(".btnNext").on("click",function () { 
+               index++;
+               if(index > imgL.length-1){
+                   index = 0;
+               }
+               $(".modalImg img").attr("src",$(imgL[index]).attr("src"));
+           });
+       
+           $(".btnPrev").on("click",function () { 
+               index--;
+               if(index < 0){
+                   index = imgL.length-1;
+               }
+               $(".modalImg img").attr("src",$(imgL[index]).attr("src"));
+           });
+     });
+     $(".closeModal").on("click",function () { 
+            $(".modalImg").removeClass("active");
+    });
+});
