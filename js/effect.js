@@ -69,7 +69,6 @@ $(document).mouseup(function (e) {
 // 
 
 $(function () { 
-
     // Add Cac The Vao Body
      const body = document.querySelector("body");
      const modalImg = document.createElement("div");

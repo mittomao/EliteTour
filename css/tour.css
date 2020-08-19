@@ -154,16 +154,18 @@ vertical-align: middle;
 }
 .earlyBird{
 	display: block;
-   background: #fff3e4;
+   /* background: #fff3e4; */
+   border: 1px solid #ddd;
     padding: 15px;
     margin: 30px 0;
 }
+
 @supports (font-variation-settings: "wght" 500) {
 .earlyBird h4{
     font-size: 26px;
     color: #ff6000;
     font-weight: 500;
-     font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 }
 .earlyBird p{
@@ -659,14 +661,26 @@ vertical-align: middle;
     margin-top: -30px;
     position: relative;
 }
+.title--box{
+    background: #1a3863;
+    padding: 15px;
+    margin: 15px 0;
+}
+.title--box h5{
+    color: #fff;
+    margin-bottom: 0;
+}
 .wrapInfo{
     display: flex;
     margin-bottom: 30px
 }
 .wrapInfo .earlyBird{
-    width: 62.7%;
-    margin-bottom: 0
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
 }
+
+
 .wrapInfo .rightInfohotel{
     width: 36.5%;
     margin-left: .8%;
@@ -695,7 +709,7 @@ vertical-align: middle;
     font-family: 'Roboto', sans-serif;
     margin-top: 20px;
     margin-bottom: 0px;
-    font-weight: 700
+    font-weight: 700;
 }
 }
 .formSearchCombo form{
@@ -894,3 +908,14 @@ vertical-align: middle;
     right: 10px;
 }
 
+
+.wrapHighlights{
+    display: flex;
+}
+.wrapHighlights .earlyBird{
+    width:62.7%;
+}
+.wrapHighlights .rightInfohotel{
+    width:37.3%;
+    padding-left: 15px;
+}

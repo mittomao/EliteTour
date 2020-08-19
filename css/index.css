@@ -847,5 +847,60 @@
 
 
 
+/* Custom */
+.wrapFill a{
+	text-decoration: none;
+}
+.wrapFill .contentFiller h2 {
+    color: #1a3863;
+    font-size: 16px;
+    transition: .3s;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    min-height: 38px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}
+
+.wrapFill .contentFiller .racting {
+    display: flex;
+    margin: 0;
+}
+
+.wrapFill .contentFiller .racting li {
+    margin-right: 5px;
+}
+
+.wrapFill .contentFiller .timeClock {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0 25px 0;
+    color: #000;
+    border-bottom: 1px solid #ddd;
+}
+
+.contentFiller .timeClock .divLeft i {
+    padding-right: 5px;
+}
+
+.contentFiller .timeClock .divRight ul {
+    display: flex;
+    height: 21px;
+}
+
+.contentFiller .timeClock .divRight li {
+    padding: 0 5px;
+}
+.contentFiller .timeClock .divRight li img {
+    width: auto;
+    max-height: 12px;
+    object-fit: cover;
+}
+
+
+
 
 
