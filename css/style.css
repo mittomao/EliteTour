@@ -53,6 +53,11 @@ a, a:focus,textarea, textarea:focus{
 }
 
 /* Bat Dau Sua Tu Day */
+.header--top{
+	background: #1a3863;
+	
+}
+
 #header {
    border-bottom: 1px solid #f1f1f1;
     background: #fff;
@@ -62,60 +67,70 @@ a, a:focus,textarea, textarea:focus{
 
     #header .logo--mb {
         width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 15px;
+		display: flex;
+		align-items: center;
+		padding-left: 15px;
+	}
+	#header .logo--mb span.mail{
+		margin-left: auto;
+		color: #fff;
+	}
+	#header .logo--mb > a{
+		margin: 0 15px;
+    }
+    #header .logo--mb  span.language{
+        padding: 0 15px;
+    }
+	#header .logo--mb  span.language img{
+		width: 20px;
+		margin: 0 2px;
     }
 
     #header .logo--mb img {
-       width: 220px;
-    object-fit: cover;
+       width: 150px;
+    	object-fit: cover;
     }
 
-        #header .logo--mb .time img {
-            width: 20px;
-            object-fit: cover;
-        }
-#header .logo--mb img.img--phone {
-    width: 30px;
-    object-fit: cover;
-}
+	#header .logo--mb .time img {
+		width: 20px;
+		object-fit: cover;
+	}
+	#header .logo--mb img.img--phone {
+		width: 30px;
+		object-fit: cover;
+	}
 
 .menu_header {
     width: 100%;
     position: absolute;
-    bottom: -25px;
+    bottom: -100px;
     left: 0;
     z-index: 100;
     left: 50%;
     transform: translateX(-50%);
 }
 
-    .menu_header .row {
-        width: 100%;
-    }
+.menu_header .row {
+    width: 100%;
+}
 
-    .menu_header > ul > li:last-child {
-        padding-right: 15px;
-    }
+.menu_header > ul > li:last-child {
+    padding-right: 15px;
+}
 
 .menu_main_mo {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 25px;
 	background: #fff;
 	border:2px solid #1a3863;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
-    .menu_main_mo > li {
-        position: relative;
-    }
+.menu_main_mo > li {
+    position: relative;
+}
 
 .dot_show_more a.dropdown-item {
     color: #000;
@@ -217,49 +232,74 @@ a, a:focus,textarea, textarea:focus{
 .sub-menu--header {
     position: absolute;
     left: -70px;
-    padding: 10px 0 0 0;
+   
     width: 250px;
-    background: #1a3863;
+    background: #fff;
     opacity: 0;
     visibility: hidden;
     transition: all .5s;
-	text-align: center; 
+    text-align: center;
+    border: 2px solid #1a3863;
 }
 ul.sub-menu--header.sub-menu--header {
     display: block;
 }
-    .sub-menu--header li:hover {
-        background: #fff;
-    }
 
-    .sub-menu--header li a {
-        font-size: 14px;
-    }
+
+.sub-menu--header li a {
+    font-size: 14px;
+    border-bottom: 1px solid #1a3863;
+}
+.sub-menu--header li a:hover {
+    background: #1a3863;
+    color: #fff !important;
+}
 
 .menu_main_mo > li:hover .sub-menu--header {
     opacity: 1;
     visibility: visible;
 }
-
+a.img-logo {
+    padding-left: 20px;
+}
 .info-phone {
     text-align: right;
     padding-right: 15px;
-    line-height: 5px;
+	color: #fff;
+	background: #f16136;
+	padding: 0 10px 0 45px;
+	position: relative;
+}
+.info-phone a{
+    text-decoration: none;
+    color: #fff;
 }
 
+	.phone-logo{
+		position: absolute;
+		top: 50%;
+		left: 7px;
+        transform: translateY(-50%);
+	}
+	.phone-logo img{
+        width: 35px !important;
+        object-fit: cover;	
+	}
     .info-phone span.time {
         display: block;
-		margin-top:7px;
+		
     }
 
     .info-phone span._tele-phone a {
-        text-decoration: none;
+		text-decoration: none;
+		white-space: nowrap;
+
     }
 
     .info-phone span._tele-phone b {
        font-size: 28px;
 		font-weight: bold;
-		color: #1a3863;
+		color: #fff;
 		text-decoration: none;
     }
 
@@ -275,11 +315,11 @@ ul.sub-menu--header.sub-menu--header {
 
 @media (max-width:991px) {
     .sub-menu--header {
-       position: static;
-    width: 100%;
-    background: #1a3863;
-    opacity: 1;
-    visibility: visible;
+        position: static;
+		width: 100%;
+		background: #1a3863;
+		opacity: 1;
+		visibility: visible;
     }
 
         .sub-menu--header li {
@@ -568,14 +608,13 @@ ul.link_infoPage li i{
 	justify-content: space-between;
 }
 .wrap_header_top {
-	display: none
+	display: none;
 }
 .menu_header{
 	
 }
 .menu_header ul {
-    /*padding: 10px 0;*/
-	padding: 0px 10px;
+    
 }
 .menu_header ul li {
 	width: auto

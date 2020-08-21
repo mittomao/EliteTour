@@ -1,105 +1,185 @@
-.banner_main{
-	/* background: url(../img/banner_main.png);
-	background-position: center;
-	background-size: cover; */
-	position: relative;
-	/* padding:50px 0; */
+
+.carousel-inner {
+    overflow: visible; 
+}
+.banner_main1 .wrap_form {
+    margin-top: 50px;
 }
 
-
-/* Style Cho Menu Tim Kiem Moi Tai Day */
-.banner_main__content{
-	position: absolute;
-	bottom: -5px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 100%;
-	z-index: 1000;
-}
-.banner_main__content .formSearchCombo h5 {
-    font-size: 22px;
-	color: #fff;
-	font-weight: 400;
-}
-.banner_main__content .formSearchCombo form {
-	margin: 0;
-	background: #e6e6e6;
-	padding: 10px;
-	box-shadow: 0 3px #faf4f4;
-}
-
-.banner_main__content .formSearchCombo form button {
-    font-size: 14px;
-}
-.banner_main__content .formSearchCombo form .from-hanoi{
-	width: 20%;
-    text-align: center;
-    border-right: 1px solid #ddd;
-	padding: 13px 20px;
-	background:#fff;
-	margin-right: 5px;
-}
-
-/* End Search*/
-
-
-.carousel-item img{
-	object-fit: cover;
-}
-.banner_main .margin_auto{
-	margin:auto;
-}
-.banner_main h1{
-	font-size: 40px;
+.banner_main1 h1 {
+    font-size: 40px;
     font-weight: bold;
 }
-.banner_main .color_white{
+
+.banner_main1 .color_white {
     color: white;
     text-shadow: 0 0 1px rgba(0,0,0,0.3);
-	margin-bottom: 15px;
-	padding-left: 15px;
+    margin-bottom: 15px;
 }
-.banner_main h2{
-	font-weight: normal;
+
+.banner_main1 h2 {
+    font-weight: normal;
     font-size: 20px;
 }
 
 
-.banner_main .home_page{
-
-	background: rgba(0,0,0,0.3);
-	padding:15px;
-	border-radius: 4px;
+.banner_main .margin_auto {
+    margin: auto;
 }
 
-.home_page .form_search{
+.banner_main {
+    /* position: absolute;
+   
+    top: 50%;
+    left: 0;
+	transform: translateY(-50%); */
 	position: relative;
-	margin-bottom: 15px;
-	display: flex;
-	align-items: center;
-	/*border-radius: 4px*/
+	width: 100%;
+}
+.banner_main__content {
+    /* position: absolute;
+    bottom: 0px;
+    left: 50%;
+	transform: translateX(-50%);
+	 */
+	display: block;
+    width: 100%;
+    z-index: 1000;
+}
+
+    .banner_main__content .formSearchCombo h5 {
+        font-size: 22px;
+        color: #fff;
+        font-weight: 400;
+		display:none;
+    }
+
+    .banner_main__content .formSearchCombo form {
+        margin: 0;
+        background: #e6e6e6;
+        padding: 10px;
+        box-shadow: 0 3px #faf4f4;
+    }
+
+        .banner_main__content .formSearchCombo form button {
+            font-size: 14px;
+        }
+
+        	.from-hanoi {
+            width: 20%;
+            text-align: center;
+            border-right: 1px solid #ddd;
+            padding: 13px 20px;
+            background: #fff;
+            margin-right: 5px;
+			position: relative;
+			
+        }
+		.from-hanoi:before {
+			content: " \203A";
+			position: absolute;
+			top: 28%;
+			transform: translateY(-50%);
+			right: 8px;
+			transform: rotate(90deg);
+			font-weight: 600;
+			font-family: 'FontAwesome';	
+		}
+
+
+.carousel-item img {
+	width: 100%;
+	height: 80vh;
+    object-fit: cover;
+}
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+
+    .rate:not(:checked) > input {
+        position: absolute;
+        display: none;
+        /*top:-9999px;*/
+    }
+
+    .rate:not(:checked) > label {
+        float: right;
+        width: 1em;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 30px;
+        color: #ccc;
+    }
+
+        .rate:not(:checked) > label:before {
+            content: '★ ';
+        }
+
+    .rate > input:checked ~ label {
+        color: #ffc700;
+    }
+
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        color: #deb217;
+    }
+
+    .rate > input:checked + label:hover,
+    .rate > input:checked + label:hover ~ label,
+    .rate > input:checked ~ label:hover,
+    .rate > input:checked ~ label:hover ~ label,
+    .rate > label:hover ~ input:checked ~ label {
+        color: #c59b08;
+    }
+.racting{
+    display:flex;
+}
+.reviewRate{
+    margin-top: 20px;
+}
+/*.banner_main .home_page {
+    vertical-align: center;
+}*/
+.banner_main h1 {
+    font-size: 40px;
+    /*font-weight: bold;*/
+}
+
+.banner_main .color_white {
+    color: white;
+    text-shadow: 0 0 1px rgba(0,0,0,0.3);
+    margin-bottom: 15px;
+}
+
+.banner_main h2 {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.banner_main .home_page {
+    background: rgba(0,0,0,0.3);
+    padding: 15px;
+    border-radius: 4px
+}
+
+.home_page .form_search {
+    position: relative;
+    margin-bottom: 15px;
+    /*border-radius: 4px*/
 }
 .home_page .form_search .input_sear{
 }
 .home_page .form_search input{
-	padding: 10px 10px 10px 50px;
+	padding:10px 10px 10px 50px;
 	line-height: 40px;
 	border:none;
 	border-radius: 4px;
 	width: 100%;
 	position: relative;
 }
-.home_page .form_search .from-hanoi{
-	width: 100%;
-	padding: 8px 20px;
-	line-height: 30px;
-	background: #fff;
-	border-radius: 3px;
-}
-.home_page .form_search .from-hanoi span{
-	text-align: center;
-}
-
 .home_page .form_search .icon_loca{
 	position: absolute;
 	top: 20px;
@@ -331,9 +411,7 @@
 	border-radius: 3px;
 	background:#438DC4;
 	color: #fff;
-	font-weight: 300;
-	padding:12px 0;
-	font-size:14px;
+	font-weight: 300
 }
 .submit_form button:hover{
 	color: #fff
@@ -375,29 +453,35 @@
     max-width: 200px;
     min-width: 140px;
 }
+.wrap_100px{
+		height: 100px
+	}
 
-
-
-/* Sua Phan Book Cat */
 
 /*18/05*/
-.boxCatting{
-	background: #fff;
-	padding:55px 0;
-}
-.boxCatting .wrapCat{
-	text-align: center;
-	padding:0 15px;
-	color: #1a3863;
-}
-.boxCatting .wrapCat img{
-	margin-bottom: 10px
-}
-.boxCatting .wrapCat h3{
-	font-size: 18px;
+.boxCatting {
+    background: #fff;
+    padding: 55px 0 40px 0;
 }
 
-/* End */
+    .boxCatting .wrapCat {
+        text-align: center;
+        padding: 0 15px;
+        color: #1a3863;
+    }
+
+        .boxCatting .wrapCat img {
+            margin-bottom: 10px
+        }
+
+        .boxCatting .wrapCat h3 {
+            font-size: 18px;
+        }
+
+.boxCatting .wrapCat h3{
+	 font-size: 20px;
+    color: #000;
+}
 @supports (font-variation-settings: "wght" 600) {
 	.boxCatting .wrapCat h3{
 		font-weight: 600
@@ -442,7 +526,11 @@
 	}
 }
 .hotTourToday{
-	padding:40px 0;
+	padding: 0 0 0 0;
+	margin-bottom: 15px;
+}
+.hotTourToday .container{
+	overflow: hidden;
 }
 .titleSection h2:before{
 	content: "";
@@ -457,13 +545,16 @@
 
 }
 .wrapSlide{
-	padding:30px 0 35px;
+	padding: 0 0 30px;
+}
+.wrapSlide .owl-carousel .owl-stage-outer {
+     overflow: visible;
 }
 .wrapBox{
 	display: block;
 	text-decoration: none;
 	color: #000;
-	border: 1px solid #acacac;
+	/*border: 1px solid #acacac;*/
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	position: relative;
@@ -472,25 +563,26 @@
 /* Phần Sale */
 .wrapBox .isSale{
 	position: absolute;
-	top: 0;
-	left: -18px;
+    top: -1px;
+    left: -12px;
 }
 .wrapBox .isSale img{
-	width: 140px;
-	object-fit: cover;
+	width: 110px;
+    object-fit: cover;
 }
 .wrapBox .isSale h4{
 	width: 100%;
-	font-size: 22px;
-	font-weight: 400;
-	color: #fff;
-	position: absolute;
-	top: 0;
-	left: 0;
-	margin: auto;
-	box-sizing: border-box;
-	padding-top: 10px;
-	padding-left: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 7px;
+    text-transform: uppercase;
 }
 
 .wrapBox:hover{
@@ -502,19 +594,31 @@
 }
 .wrapBox .img_SlideSecti img{
 	width: 100%;
-	transition: .3s;
-	object-fit: cover
+    height: 215px;
+    transition: .3s;
+    object-fit: cover;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
 .wrapBox .contentSection{
-	margin-top: 20px;
-	padding: 0 10px 10px 10px;
+	/*margin-top: 20px;*/
+	padding: 20px 10px 10px 10px;
+    border: 1px solid #acacac;
+    border-top: none;
 }
 .wrapBox .contentSection h2{
 	color: #1a3863;
-	font-size: 20px;
-	transition: .3s;
-	margin-bottom: 10px;
-	font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    transition: .3s;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+	min-height: 38px;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+	
 }
 .wrapBox .contentSection h2:hover{
 	color: #ff6000
@@ -533,44 +637,51 @@
 }
 .wrapBox .contentSection .timeClock{
 	display: flex;
-	justify-content: space-between;
-	padding: 7px 0;
-	border-bottom: 1px solid #ddd
+    justify-content: space-between;
+    padding: 7px 0 25px 0;
+    color: #000;
+    border-bottom: 1px solid #ddd;
 }
 .contentSection .timeClock .divLeft i{
 	padding-right: 5px
 }
 .contentSection .timeClock .divRight ul{
 	display: flex;
+    height: 21px;
 }
 .contentSection .timeClock .divRight li{
 	padding:0 5px
 }
 .contentSection .timeClock .divRight li img{
 	width: auto;
-	max-height: 14px;
-	object-fit: cover;
+    max-height: 12px;
+    object-fit: cover;
 }
 .priceForm{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-top: 10px;
+	padding-top: 25px;
 }
 .priceForm .priceLeft{}
 .priceForm .priceLeft span{
 	display: block;
+    font-size: 14px;
+    opacity: 0.8;
+    padding-top: 10px;
+	color: #000;
 }
 .priceForm .priceLeft span.priceOld{
 	text-decoration: line-through;
-	color: #ddd
+	font-size: 14px;
+    opacity: 0.8;
 }
 .priceForm .priceLeft .rateStar{
 	display: flex;
 	align-items: center;
 }
 .priceForm .priceLeft .rateStar img{
-	
+	margin: 0 5px;
 }
 .priceForm .priceLeft .rateStar span.qty_star{
 	padding: 5px;
@@ -581,13 +692,21 @@
 }
 .priceForm .priceLeft .rateStar span.rateType{
 	margin-left: 3px;
-	border-bottom: 1px solid;
+    border-bottom: 1px solid;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #000;
+    -webkit-line-clamp: 2;
 }
 
 /* Edit  priceNew*/
 .priceForm .location .priceNew{
-	font-size: 20px;
-	display: block;
+	font-size: 18px;
+    display: block;
+    padding-top: 15px;
 }
 @supports (font-variation-settings: "wght" 600) {
 	.priceForm .location .priceNew{
@@ -597,8 +716,16 @@
 }
 .priceForm .priceLeft .priceOld{}
 .priceForm .location{
-	font-size: 17px;
-	text-align: right;
+	font-size: 14px;
+    text-align: right;
+    padding-left: 10px;
+}
+.priceForm .location a.titleTour {
+ 
+     color: #000;
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 .priceForm .location img{
 	width: 15px;
@@ -622,11 +749,11 @@
 .hotTourToday .owl-carousel .owl-nav button.owl-prev{}
 .hotTourToday .owl-carousel .owl-nav button.owl-next{}
 .hotTourToday .owl-carousel .owl-nav button.owl-prev:before{
-	content: url(../img/index/fixAdd/prev.png);
+	content: url(../img/index/fixAdd/p1.jpg);
 	/*position: absolute;*/
 }
 .hotTourToday .owl-carousel .owl-nav button.owl-next:before{
-	content: url(../img/index/fixAdd/next.png);
+	content: url(../img/index/fixAdd/n1.jpg);
 	/*position: absolute;*/
 }
 .spaceWish img{
@@ -703,20 +830,24 @@
 }
 .evenvorche .wrapBoxChuongTrinh{
 	padding:30px 0;
-	background: #f8f8f8;
+	/*background: #f8f8f8;*/
 }
 .wrapBoxChuongTrinh .wrapEven{
-	display: flex;
-	text-decoration: none;
-	color: #000;
-	margin-bottom: 20px
+	    display: flex;
+		align-items: stretch;
+		text-decoration: none;
+		color: #000;
+		margin-bottom: 20px;
+		padding: 15px;
+		border: 1px solid #f2f3f4;
 }
 .wrapBoxChuongTrinh .wrapEven .img{
 	width: 100px;
 }
 .wrapBoxChuongTrinh .wrapEven img{
-	width: 100%;
-	object-fit: cover;
+	  width: 100%;
+    height: 120px;
+    object-fit: cover;
 }
 .wrapBoxChuongTrinh .wrapEven .contentEven{
 	width: calc(100% - 100px);
@@ -727,7 +858,12 @@
 }
 .wrapBoxChuongTrinh .wrapEven .contentEven p.textEven{
 	font-size: 13px;
-	margin-bottom: 0
+	margin-bottom: 0;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
 }
 .wrapBoxChuongTrinh .wrapEven .numberView{}
 @supports (font-variation-settings: "wght" 600) {
@@ -753,7 +889,7 @@
 }
 .wrapSlidefeback .wrapperItemElue{
 	padding: 40px 15px 15px 15px;
-    background: #f0fdff;
+    background: #fff8eb;
     margin-top: 50px;
     position: relative;
 }
@@ -764,7 +900,7 @@
     top: -46px;
 }
 .wrapSlidefeback .wrapperItemElue .avartar img{
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+    /*box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);*/
 	width: 100%;
 	height: 80px;
 	object-fit: cover;
@@ -777,18 +913,28 @@
 }
 @supports (font-variation-settings: "wght" 600) {
 	.wrapSlidefeback .wrapperItemElue .text-hot p{
-		font-weight: 600;
-		font-size: 18px;
-	    font-weight: 600;
-	    color: #1a3863;
-	    line-height: 18px;
-	    margin-bottom: 0
+		 font-weight: 600;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a3863;
+    line-height: 18px;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+	min-height:42px;
 	}
 	
 }
-.wrapperItemElue .text-hot ul{}
+.wrapperItemElue .text-hot ul{
+display: flex;
+    flex-wrap: nowrap;
+}
 .wrapperItemElue .text-hot ul li{
-	display: inline-block
+	display: inline-block;
+    margin: 0 2px;
 }
 .wrapperItemElue .text-hot ul li i{
 	color: #FFD200;
@@ -836,69 +982,163 @@
 	text-align: right
 }
 #elue.owl-carousel .owl-nav button.owl-prev:before{
-	content: url(../img/index/fixAdd/prev.png);
+	content: url(../img/index/fixAdd/p1.jpg);
 }
 #elue.owl-carousel .owl-nav button.owl-next:before{
-	content: url(../img/index/fixAdd/next.png);
+	content: url(../img/index/fixAdd/n1.jpg);
+}
+span.carousel-control-next-icon i {
+    font-size: 30px;
+
+}
+span.carousel-control-prev-icon i {
+    font-size: 30px;
+
+}
+button.close span {
+    font-size: 40px;
 }
 
+@media (max-width:991px){
+.banner_main__content {
+    bottom: -50px;
+}
+	.titleSection h2 {
+    font-size: 25px;
+}
+}
 
+@media (max-width:575px){
+main .img_slider {
+    	height: auto;
+	}
+	.banner_main__content {
+    	bottom: -215px;
+	}
+.banner_main__content .formSearchCombo h5 {
+    color: #000;
+	font-size:16px;
+	    margin-bottom: 10px;
+}
+}
 
-
-
-
-/* Custom */
-.wrapFill a{
+.wrapFill a {
 	text-decoration: none;
 }
+
 .wrapFill .contentFiller h2 {
-    color: #1a3863;
-    font-size: 16px;
-    transition: .3s;
-    margin-bottom: 10px;
-    font-family: 'Roboto', sans-serif;
-    min-height: 38px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
+	color: #1a3863;
+	font-size: 16px;
+	transition: .3s;
+	margin-bottom: 10px;
+	font-family: 'Roboto', sans-serif;
+	min-height: 38px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
 }
 
 .wrapFill .contentFiller .racting {
-    display: flex;
-    margin: 0;
+	display: flex;
+	margin: 0;
 }
 
-.wrapFill .contentFiller .racting li {
-    margin-right: 5px;
-}
+	.wrapFill .contentFiller .racting li {
+		margin-right: 5px;
+	}
 
 .wrapFill .contentFiller .timeClock {
-    display: flex;
-    justify-content: space-between;
-    padding: 7px 0 25px 0;
-    color: #000;
-    border-bottom: 1px solid #ddd;
+	display: flex;
+	justify-content: space-between;
+	padding: 7px 0 25px 0;
+	color: #000;
+	border-bottom: 1px solid #ddd;
 }
 
 .contentFiller .timeClock .divLeft i {
-    padding-right: 5px;
+	padding-right: 5px;
 }
 
 .contentFiller .timeClock .divRight ul {
-    display: flex;
-    height: 21px;
+	display: flex;
+	height: 21px;
 }
 
 .contentFiller .timeClock .divRight li {
-    padding: 0 5px;
+	padding: 0 5px;
 }
+
 .contentFiller .timeClock .divRight li img {
-    width: auto;
-    max-height: 12px;
-    object-fit: cover;
+	width: auto;
+	max-height: 12px;
+	object-fit: cover;
 }
+
+.formSearchIndex{
+	background: #1a3863;
+	padding: 25px;
+}
+.formSearchIndex  form > div{
+	display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+.formSearchIndex form .from-hanoi{
+    width: 20%;
+    border: 1px solid #fff;
+	padding: 13px 20px;
+	color: #fff;
+	background: transparent;
+	font-size: 16px;
+
+}
+.formSearchIndex form .chose-area {
+    width: 60%;
+	margin: 0 20px;
+	position: relative;
+}
+.formSearchIndex form .chose-area::before{
+  content: url(./../img/logo/location.png);
+  position: absolute;
+  top: 10px;
+  left: 30px;
+}
+.formSearchIndex form .chose-area input{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding: 13px 20px;
+	font-size: 16px;
+	box-sizing: border-box;
+	background: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+.formSearchIndex form .chose-area input:focus{
+	border:1px solid lime;
+}
+
+.formSearchIndex form .chose-area input::placeholder{
+	color: #fff;
+}
+
+.formSearchIndex form button {
+    width: 20%;
+    padding: 13px 20px;
+	background: transparent;
+	border:1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+}
+.formSearchIndex form button:hover {
+    background: #fff;
+    color: #1a3863;
+}
+
+
 
 
 
